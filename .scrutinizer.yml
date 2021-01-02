@@ -8,7 +8,7 @@ before_commands:
 
 filter:
   excluded_paths:
-    - tests/*
+    - tests
 
 build:
   environment:
@@ -17,7 +17,8 @@ build:
     coverage:
       tests:
         override:
-          - command: "vendor/bin/phpunit --colors=always --coverage-clover coverage.clover tests"
+          - php-scrutinizer-run
+          - command: "vendor/bin/phpunit --coverage-clover coverage.clover tests"
             coverage:
               file: coverage.clover
               format: clover
