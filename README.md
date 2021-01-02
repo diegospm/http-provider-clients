@@ -7,6 +7,7 @@
 ![Scrutinizer build (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/build/g/diegospm/http-provider-clients?label=scrutinizer+build&style=flat-square)
 ![Scrutinizer coverage (GitHub/BitBucket)](https://img.shields.io/scrutinizer/coverage/g/diegospm/http-provider-clients?style=flat-square)
 ![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/diegospm/http-provider-clients?style=flat-square)
+![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/diegospm/http-provider-clients?style=flat-square)
 
 This package contains the clients for the HTTP Provider abstraction. If you notice compliance oversights, please, send a PR.
 
