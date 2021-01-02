@@ -17,7 +17,7 @@ class GuzzleTest extends TestCase
     {
         parent::setUp();
 
-        $this->client = new Guzzle();
+        $this->client = new Guzzle([]);
     }
 
     public function testAttachResponse(): void
@@ -37,7 +37,7 @@ class GuzzleTest extends TestCase
 
     public function testSetParams(): void
     {
-        $this->assertInstanceOf(ClientInterface::class, $this->client->setParams(array()));
+        $this->assertInstanceOf(ClientInterface::class, $this->client->setParams([]));
     }
 
     public function testSetBody(): void

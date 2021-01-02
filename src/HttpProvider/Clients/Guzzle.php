@@ -18,16 +18,16 @@ class Guzzle implements ClientInterface
 
     private string $method;
 
-    private array $params = array();
+    private array $params = [];
 
     /**
      * @var mixed
      */
     private $body = null;
 
-    public function __construct(array $options = array())
+    public function __construct(array $options = [])
     {
-        $this->client = new Client(array_merge(array('http_errors' => false), $options));
+        $this->client = new Client(array_merge(['http_errors' => false], $options));
     }
 
     public function attachResponse(ResponseInterface $response): ClientInterface
@@ -67,8 +67,8 @@ class Guzzle implements ClientInterface
 
     public function send(): ResponseInterface
     {
-        $request = new Request($this->method, $this->url, $this->params, $this->body);
-        $response = $this->client->send($request);
+        $request    = new Request($this->method, $this->url, $this->params, $this->body);
+        $response   = $this->client->send($request);
 
         return $this->response->setStatusCode($response->getStatusCode())
         ->setContent($response->getBody()->getContents());
